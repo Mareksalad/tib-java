@@ -13,5 +13,6 @@ public class Kostky {
     int rychlost; // Počet ms (milisekund) za spadnutí o jendo políčko
     int x; // V políčcích
     int y; // V políčcích
+    boolean muzeSeHybat;
 }
 

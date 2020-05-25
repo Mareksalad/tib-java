@@ -8,12 +8,22 @@
  * @author Ucebna
  */
 import java.util.Random;
+import java.util.Arrays;
  
 public enum Tvar {
     ESKO_L, ESKO_R, CTVEREC, ICKO, TECKO, ELKO_L, ELKO_R;
     
     public static Tvar nahodnyTvar(){
       return values()[new Random().nextInt(values().length)];
+    }
+
+    public static int vyska(Tvar tvar){
+      for(int i = 0; i < 4; i++){
+        if(Arrays.asList(tvar.vTabulce()[i]).contains(true)){
+          vyska++;
+        }
+      }
+      return vyska;
     }
 
     public boolean[][] vTabulce() {
